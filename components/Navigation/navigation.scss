@@ -3,8 +3,17 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  position: relative;
+  position: fixed;
   height: 72px;
+  margin: 0 auto;
+  width: 100%;
+  top: 0;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &--item {
     @include font-weight(700);

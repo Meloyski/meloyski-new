@@ -15,10 +15,33 @@ export const FadeInUp = {
   },
 };
 
-export const Offet = {
+export const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 1,
+    },
+  },
+};
+
+export const HeroStagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+export const HeroItems = {
+  initial: {
+    y: 60,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: easing,
     },
   },
 };

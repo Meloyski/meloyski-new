@@ -43,3 +43,51 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.viewport {
+  height: 100vh;
+  width: 100%;
+  animation: background 2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes background {
+  0% {
+    background: #1f66e9;
+  }
+  25% {
+    background: #4edef8;
+  }
+  50% {
+    background: #f7ac35;
+  }
+  75% {
+    background: #ad172b;
+  }
+  100% {
+    background: #ddd;
+  }
+}
+
+.hero {
+  width: 100%;
+  max-width: 1400px;
+  text-align: center;
+  button {
+    font-size: 24px;
+    height: 64px;
+    border-radius: 6px;
+    @include font-weight(900);
+    padding: 0 36px;
+    &.at-button--contained {
+      margin: 24px 0 12px;
+    }
+  }
+}
+
+h1 {
+  @include font-weight(900);
+  font-size: 78px;
+}
