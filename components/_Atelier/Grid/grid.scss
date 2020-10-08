@@ -1,0 +1,66 @@
+@mixin columnWidth($col, $mobileCol, $gutter: 24px, $width: 100%) {
+  &.width-#{$col} {
+    width: calc((#{$width} + #{$gutter} * (1 - #{$col})) / #{$col});
+    margin: 0 $gutter $gutter 0;
+
+    &:nth-child(#{$col}n) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+    @content;
+  }
+
+  .mobile-#{$mobileCol} {
+    @media (max-width: 768px) {
+      width: calc((100% + #{$gutter} * (1 - #{$mobileCol})) / #{$mobileCol});
+      margin-right: $gutter !important;
+
+      &:nth-child(#{$mobileCol}n) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.column:last-child {
+  margin-right: 0 !important;
+}
+
+.column {
+  height: 50px;
+  background: rgba(0, 0, 0, 0.1);
+
+  @include columnWidth(1, 1);
+  @include columnWidth(2, 1);
+  @include columnWidth(3, 1);
+  @include columnWidth(4, 1) {
+    background: red;
+  }
+  @include columnWidth(5, 1);
+  @include columnWidth(6, 1);
+  @include columnWidth(7, 1);
+  @include columnWidth(8, 1);
+  @include columnWidth(9, 1);
+  @include columnWidth(10, 1);
+  @include columnWidth(11, 1);
+  @include columnWidth(12, 2);
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}

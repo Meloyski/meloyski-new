@@ -1,0 +1,59 @@
+.at-button {
+  @include font-weight(700);
+  padding: 0 24px;
+  font-family: inherit;
+  line-height: 1;
+  transition: 0.3s all ease-in-out;
+
+  // variant
+  &--contained {
+    color: white;
+    background: $primary;
+    border: none;
+    &:hover {
+      background: mix($primary, white, 90);
+    }
+  }
+  &--outlined {
+    color: $primary;
+    background: rgba($primary, 0);
+    border: 1px solid rgba($primary, 0.9);
+    &:hover {
+      background: rgba($primary, 0.1);
+      border: 1px solid rgba($primary, 1);
+    }
+  }
+  &--text {
+    color: $primary;
+    background: rgba($primary, 0);
+    border: 1px solid rgba($primary, 0);
+    &:hover {
+      background: rgba($primary, 0.1);
+    }
+  }
+
+  // size
+  &--small {
+    height: 36px;
+    font-size: 14px;
+  }
+
+  &--medium {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  &--large {
+    height: 52px;
+    font-size: 18px;
+  }
+
+  &.rounded {
+    border-radius: 4px;
+  }
+
+  &:focus {
+    outline: 0px;
+    box-shadow: 0 0 0 3px mix($primary, white, 50);
+  }
+}
