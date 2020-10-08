@@ -1,0 +1,6 @@
+$black: #222;
+$grey: #f7f8f9;
+
+@mixin font-weight($weight, $italic: 100) {
+  font-variation-settings: "wght" $weight, "ital" $italic;
+}

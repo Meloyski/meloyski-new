@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  height: 72px;
+  &--item {
+    @include font-weight(600);
+    font-size: 22px;
+    width: 100px;
+    letter-spacing: 0.2px;
+  }
+  &--logo {
+    width: 100%;
+    max-width: 800px;
+    transform: translateY(0);
+  }
+}

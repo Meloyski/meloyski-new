@@ -1,0 +1,40 @@
+// variables
+@import "./variables.scss";
+
+// components
+@import "../components/Meloyski/meloyski.scss";
+@import "../components/Navigation/navigation.scss";
+
+@font-face {
+  font-family: "AvantSans";
+  src: url("/fonts/AvantSans-Regular.eot");
+  src: url("/fonts/AvantSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/AvantSans-Regular.woff2") format("woff2"),
+    url("/fonts/AvantSans-Regular.woff") format("woff"),
+    url("/fonts/AvantSans-Regular.ttf") format("truetype"),
+    url("/fonts/AvantSans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvantSansGX";
+  src: url("/fonts/AvantSansGX.woff2") format("woff2-variations");
+  src: url("/fonts/AvantSansGX.woff2") format("woff2");
+  font-weight: 100 900;
+}
+
+body {
+  background-color: #ddd;
+  font-family: "AvantSansGX", "AvantSans", sans-serif;
+  @include font-weight(400);
+  color: #222;
+  font-size: 16px;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
